@@ -34,12 +34,12 @@ class SignUp extends Component {
 
             createUserProfileDocument(user, { displayName });
             
-            this.state = {
+            this.setState({
                 displayName: '',
                 email: '',
                 password: '',
                 confirmPassword: ''
-            };
+            });
         } catch(error) {
             console.error(error);
         }
