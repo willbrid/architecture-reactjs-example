@@ -1,15 +1,16 @@
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
+import { FIREBASE_CONFIG } from '../constants';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCc12JZO0lcbTnsqnTYvLpuhMDNu_fpZ0E",
-    authDomain: "firestore-test-553de.firebaseapp.com",
-    databaseURL: "https://firestore-test-553de.firebaseio.com",
-    projectId: "firestore-test-553de",
-    storageBucket: "firestore-test-553de.appspot.com",
-    messagingSenderId: "893177151432",
-    appId: "1:893177151432:web:d105bcded7a2f793ce0afd"
+    apiKey: FIREBASE_CONFIG.apikey,
+    authDomain: FIREBASE_CONFIG.authDomain,
+    databaseURL: FIREBASE_CONFIG.databaseURL,
+    projectId: FIREBASE_CONFIG.projectId,
+    storageBucket: FIREBASE_CONFIG.storageBucket,
+    messagingSenderId: FIREBASE_CONFIG.messagingSenderId,
+    appId: FIREBASE_CONFIG.appId
 };
 
 export const createUserProfileDocument = async (userAuth, additionalData = {}) => {
